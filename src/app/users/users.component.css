@@ -4,7 +4,7 @@ table.dataTable thead  {
     font-size: 14px;
     font-style: normal;
     background-color: #f5f7f7;
-    color: #71748d;
+    color: #0000008A;
     font-weight: 600;
     font-size: 12px;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
@@ -33,10 +33,11 @@ table.dataTable thead  {
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
      font-family: 'Circular Std Book';
      font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-     color: black;
+     font-weight: 400;   
+      font-size: 14px;
+    color: #000;
     -webkit-font-smoothing: antialiased;
+  
    
      
        
@@ -50,5 +51,7 @@ table.dataTable thead  {
     border-top: 1px solid #dddddd;
     border-bottom: 1px solid #dddddd;
     border-right: 1px solid #dddddd;
+    background-color: #F5F5F5;;
+    
 
   }
