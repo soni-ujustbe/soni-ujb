@@ -17,42 +17,8 @@ export class UsersComponent implements OnInit,AfterViewInit,OnDestroy {
   dtOptions: DataTables.Settings = {};
    dtTrigger: Subject<any> = new Subject<any>();
 
-   constructor(private http:HttpClient) 
-   {}
-  // private gridApi;
-  // private gridColumnApi;
-  // private columnDefs;
-  // private sortingOrder;
-
-  // constructor(){
-  //   this.columnDefs=[
-  //     {
-  //       headerName:"Name",
-  //       field:"firstname",
-  //       width:150,
-  //       this.sortingOrder:["asc","desc"]
-  //     },
-  //     { headerName:"age",
-  //     field:"age",
-  //     width:50
-
-
-  //     }
-  //   ];
-  // }
+   constructor(private http:HttpClient) {}
   
-
- 
- 
- 
-
-  // users(): void{
-  //   this.http
-  //       .users()
-  //       .Subscribe((response: any) => {
-  //         this.data = response.data;
-  //       });
-  // }
     ngOnInit():void{
       this.http.get("https://api-test.ujustbe.com/Meeting/getallmeetings")
       .subscribe(data=>{
@@ -67,24 +33,8 @@ export class UsersComponent implements OnInit,AfterViewInit,OnDestroy {
     
     ngAfterViewInit(): void {
      
-    //   this.datatableElement.dtInstance.then((dtInstance: DataTables.Api) => {
-    //     dtInstance.columns().every(function () {
-    //       const that = this;
-    //       $('input', this.footer()).on('keyup change', function () {
-    //         if (that.search() !== this['value']) {
-    //           that
-    //             .search(this['value'])
-    //             .draw();
-    //         }
-    //       });
-    //     });
-    //   });
-
      }
     
-    
-
-
     ngOnDestroy():void{
       this.dtTrigger.unsubscribe();
     }
