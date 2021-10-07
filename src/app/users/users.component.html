@@ -1,0 +1,75 @@
+<div class="container">
+    <div class="card m-5 p-3">
+        <div class="card-body">
+            
+            <table class="table table-bordered table-striped table-hover" datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" >
+                
+                <thead class="headerData">
+                <tr>
+                    <th>Username</th>
+                    <th>Agenda</th>
+                    <th>UserId</th>
+                    <th>Meeting Code</th>
+                    <th>Meeting Date</th>
+                    <th>Meeting Id</th>
+                    <th>Title</th>
+                    <th>To userName</th>
+                    <th>To userId</th>
+                    <th>Status</th>
+                </tr>
+                </thead> 
+
+                <thead class="headerSearch">
+                    
+                    <tr>
+                        <th><input type="text" placeholder="User Name" name="User Name"></th>
+                        <th><input type="text" placeholder="Agenda" name="Meeting Agenda"></th>
+                        <th><input type="text" placeholder="User Id" name="User Id"></th>
+                        
+                        <th><input type="text" placeholder="Meeting Code" name="Meeting Code"></th>
+                        <th><input type="text" placeholder="Meeting Date" name="Meeting Date"></th>
+                        <th><input type="text" placeholder="Meeting Id" name="Meeting Id"></th>
+                        <th><input type="text" placeholder="Title" name="Title"></th>
+                        <th><input type="text" placeholder="To User Name" name="To UserName"></th>
+                        <th><input type="text" placeholder="To User Id" name="To UserId"></th>
+                        <th><input type="text" placeholder="Status" name="status"></th>
+                    </tr>
+              
+                </thead>
+                <tbody >
+                <tr *ngFor="let user of data.data.meetingList">
+                    <td>{{ user.fromUserName }}</td>
+                    <td>{{ user.agenda }}</td>
+                    <td>{{ user.fromUserId }}</td>
+                    <td>{{ user.meetingCode }}</td>
+                    <td>{{ user.meetingDate }}</td>
+                    <td>{{ user.meetingId }}</td>
+                    <td>{{ user.title }}</td>
+                    
+                   
+                    <td>
+                        <span *ngFor="let toUsers of user.toUsersList">
+                        {{ toUsers.toUserName }}
+                        </span>           
+                    </td>
+            
+                    <td>
+                        <span *ngFor="let toUsers of user.toUsersList">
+                        {{toUsers.userId}}
+                        </span>           
+                    </td>   
+                    <td>
+                        <span *ngFor="let toUsers of user.toUsersList">
+                        {{toUsers.status}}
+                        </span>           
+                    </td>   
+
+
+                
+                </tbody>
+                
+            </table>
+        </div>
+
+    </div>
+</div>
