@@ -15,9 +15,11 @@ export class UsersComponent implements OnInit,AfterViewInit,OnDestroy {
   
   data: any= []; 
   dtOptions: DataTables.Settings = {};
+  // dtColumnDefs: DataTables.Settings={};
    dtTrigger: Subject<any> = new Subject<any>();
 
    constructor(private http:HttpClient) {}
+
   
     ngOnInit():void{
       this.http.get("https://api-test.ujustbe.com/Meeting/getallmeetings")
@@ -25,11 +27,21 @@ export class UsersComponent implements OnInit,AfterViewInit,OnDestroy {
        console.log(data);
        this.data=data;
        this.dtTrigger.next();
+       this.dtOptions={
+         columnDefs:[
+
+         //newColumnDef([3,4,5,11]).withOption('type', 'date')
+
+          
+         { targets: 3, type: 'date' }
+
+         ]
+       }
       
        });
     
     }
-  
+    
     
     ngAfterViewInit(): void {
      

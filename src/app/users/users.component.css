@@ -52,6 +52,7 @@ table.dataTable thead  {
     border-bottom: 1px solid #dddddd;
     border-right: 1px solid #dddddd;
     background-color: #ebebeb;
+    text-align: center;
     
 
   }
