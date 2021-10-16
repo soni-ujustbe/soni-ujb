@@ -31,8 +31,7 @@ export class UsersComponent implements OnInit,AfterViewInit,OnDestroy {
          columnDefs:[
 
          //newColumnDef([3,4,5,11]).withOption('type', 'date')
-
-          
+  
          { targets: 3, type: 'date' }
 
          ]
@@ -40,8 +39,7 @@ export class UsersComponent implements OnInit,AfterViewInit,OnDestroy {
       
        });
     
-    }
-    
+    }  
     
     ngAfterViewInit(): void {
      

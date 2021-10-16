@@ -12,8 +12,6 @@ table.dataTable thead  {
   }
    thead  
   {
-   
-     
         font-family: inherit;
         font-size: inherit;
         line-height: inherit;
@@ -37,11 +35,7 @@ table.dataTable thead  {
       font-size: 14px;
     color: #000;
     -webkit-font-smoothing: antialiased;
-  
-   
-     
-       
-      
+    
   } 
   td {
     line-height: 26px;
