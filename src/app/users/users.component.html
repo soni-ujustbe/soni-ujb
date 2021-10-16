@@ -41,7 +41,7 @@
                         {{ toUsers.toUserName }}
                         </span>           
                     </td>
-                    <td>{{ user.meetingDate | date: 'dd-MM-yyyy | HH:mm:ss ' }}</td>
+                    <td>{{ user.meetingDate | date: 'dd-MM-yyyy | HH:mm:ss a' }}</td>
                     <td>
                         <span *ngFor="let toUsers of user.toUsersList">
                         {{toUsers.status}}
